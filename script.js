@@ -19,3 +19,16 @@ const arrayVariableSum = function (array) {
 };
 
 arrayVariableSum(myArray);
+
+// Please create a function that takes in the name of a person. This function should add this person to a names list and let them know their position on the list. The names list should be created outside of the function.
+
+let namesList = [];
+const takesName = function (name) {
+  namesList.push(name);
+  message = `${name} you are number ${namesList.length} in line`;
+  console.log(message);
+};
+
+takesName("Anton");
+takesName("George");
+takesName("Boris");
