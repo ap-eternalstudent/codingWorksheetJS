@@ -45,3 +45,46 @@ const takesArray = function (array) {
 };
 
 takesArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+const numsArr = [2, 7, 11, 15];
+const targetNum = 18;
+
+const twoSum = function (nums, target) {
+  let message = "";
+  let firstVar = nums[0];
+  let secondVar = nums[1];
+  let thirdVar = nums[2];
+  let fourthVar = nums[3];
+  let index1 = 0;
+  let index2 = 0;
+  if (firstVar + secondVar === target) {
+    index1 = nums.indexOf(firstVar);
+    index2 = nums.indexOf(secondVar);
+    message = `${index1} and ${index2}`;
+  } else if (firstVar + thirdVar === target) {
+    index1 = nums.indexOf(firstVar);
+    index2 = nums.indexOf(thirdVar);
+    message = `${index1} and ${index2}`;
+  } else if (firstVar + fourthVar === target) {
+    index1 = nums.indexOf(firstVar);
+    index2 = nums.indexOf(fourthVar);
+    message = `${index1} and ${index2}`;
+  } else if (secondVar + thirdVar === target) {
+    index1 = nums.indexOf(secondVar);
+    index2 = nums.indexOf(thirdVar);
+    message = `${index1} and ${index2}`;
+  } else if (secondVar + fourthVar === target) {
+    index1 = nums.indexOf(secondVar);
+    index2 = nums.indexOf(fourthVar);
+    message = `${index1} and ${index2}`;
+  } else if (thirdVar + fourthVar === target) {
+    index1 = nums.indexOf(thirdVar);
+    index2 = nums.indexOf(fourthVar);
+    message = `${index1} and ${index2}`;
+  } else {
+    message = "no can do";
+  }
+  return message;
+};
+
+twoSum(numsArr, targetNum);
